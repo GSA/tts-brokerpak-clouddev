@@ -1,9 +1,11 @@
 packversion: 1
-name: datagov-brokerpak-smtp
 version: current
+name: my-services-pack
 metadata:
-  author: Bret Mogilefsky
+  author: me@example.com
 platforms:
+- os: linux
+  arch: "386"
 - os: linux
   arch: amd64
 terraform_binaries:
@@ -11,8 +13,8 @@ terraform_binaries:
   version: 1.1.5
   source: https://github.com/hashicorp/terraform/archive/v1.1.5.zip
 - name: terraform-provider-random
-  version: 3.1.2
-  source: https://releases.hashicorp.com/terraform-provider-null/3.1.0/terraform-provider-null_3.1.2_linux_amd64.zip
+  version: 3.2.0
+  source: https://releases.hashicorp.com/terraform-provider-random/3.2.0/terraform-provider-random_3.2.0_linux_amd64.zip
 service_definitions:
 - services/example-service-definition.yml
 parameters:
